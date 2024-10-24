@@ -1,0 +1,195 @@
+<html>
+<header>
+    <title>forms</title>
+</header>
+
+<body>
+    <p>
+        basicamente a gente vai fazer o usuário preencher dados e depois enviar eles para outra página.
+    </p>
+    <hr>
+    <p>
+        a tag form, sempre deve ter o atributo action e normalmente terá method e id.
+    </p>
+    <p>Action é para onde o formulário será enviado, é a url para a página do servidor irá receber.</p>
+    <p>
+        O metodo <strong>get</strong> vai adicionar os valores do formulário ao fim da url especificada.
+        ele é ideal para pequenos formularios. como caixas de pesquisa.
+        quando você está apenas recuperando dados do servidor web(não enviando informações que devem ser adicionadas ou
+        excluídas de um banco de dados.)
+    </p>
+    <hr>
+    <p>
+        O metodo <strong>post</strong> os valores são enviados no cabeçalho http, deve usar se os user carregam arquivos
+        longos ou que contem dados confidenciais, adiciona informações ou exclui informações de um banco de dados.
+        <strong>O atributo id é usado principalmente por scripts para verificar se você inseriu informações em campos
+            que exigem valores.</strong>
+    </p>
+
+    <hr>
+    <form action="http://example.com/login.php">
+        <p>Username:
+            <input type="text" name="username" size="15">
+        </p>
+        <p>
+            Password:
+            <input type="password" name="password" size="15">
+        </p>
+    </form>
+    <p>A parte de maxlength é pra ser usada no css.</p>
+    <p>Para segurança total usar ssl</p>
+    <hr>
+    <p>
+        Text area
+    </p>
+    <form action="http://www.example.com/comments.php">
+        <p>What did you think of this gig?</p>
+        <textarea name="comments">Enter your comments...</textarea>
+    </form>
+    <p>Altura e largura você altera pelo css.</p>
+    <hr>
+    <br>
+    <p>Tipo radio, você só pode escolher uma opção.</p>
+    <form action="http://www.example.com/profile.php">
+        <p>Please select your favorite genre:
+            <br>
+            <input type="radio" name="genre" value="rock" checked="checked">Rock
+            <input type="radio" name="genre" value="pop">pop
+            <input type="radio" name="genre" value="jazz">jazz
+        </p>
+    </form>
+    <hr>
+    <p>o tipo checkbox pode ser usado para marcar mais de uma opção.</p>
+    <form action="http://www.example.com/profile.php">
+        <p>Please select your favorite music service(s):
+            <br>
+            <input type="checkbox" name="service" value="itunes" checked="checked">iTunes
+            <input type="checkbox" name="service" value="lastfm">Last.fm
+            <input type="checkbox" name="service" value="spotify">Spotify
+        </p>
+    </form>
+    <hr>
+    <p>DropDown List Box, é usado para selecionar apenas uma opção.</p>
+    <form action="http://example.com/profile.php">
+        <p>What device do you listen to music on?</p>
+        <select name="devices">
+            <option value="ipode">iPod</option>
+            <option value="radio">Radio</option>
+            <option value="computer">Computer</option>
+        </select>
+    </form>
+    <hr>
+    <br>
+    <p>Multiplas seleções na select box.</p>
+    <form action="http://www.example.com/profile.php">
+        <p>
+            Do you play any of tthe following instruments? (You can select more than one option by holding down control
+            on a PC or command key on a Mac while selecting different options.)
+        </p>
+        <select name="instruments" size="3" multiple="multiple">
+            <option value="guitar" selected="selected">Guitar</option>
+            <option value="drums">Drums</option>
+            <option value="keyboard" selected="selected">Keyboard</option>
+            <option value="bass">Bass</option>
+        </select>
+    </form>
+    <hr>
+    <p>tag input file e o submit, o submite é o que vai enviar os dados para o servidor. e o atributo value é o que vai
+        ter o nome do botão do input.</p>
+    <form action="http://example.com/upload.php" method="post">
+        <p>Upload your song in MP3 format:</p>
+        <input type="file" name="user-song"><br>
+        <input type="submit" value="Upload">
+    </form>
+    <p>é possível também usar imagens como input.</p>
+    <form action="http://www.example.com/subscribe.php">
+        <p>Subscribe to our email list:</p>
+        <input type="text" name="email">
+        <input type="image" src="images/subscribe.jpg" width="100" height="20">
+    </form>
+    <hr>
+    <br>
+    <p>Temos também a tag button que é possível usar para deixar que os usuários tenham um controle maior ssobre os seus
+        botões, sendo possível colocar elementos dentro do botão.
+        <strong>type="hidden"</strong> é usado para se ter um controle de formulário oculto. eles não são mostrados na
+        página, eles permitem que os autores da página adicionem valores a formulários que os usuários não podem ver.
+        ex. um autor da pagina web pode usar um campo oculto para inidicar em qual página o usuário estava quando enviou
+        um formulário.
+    </p>
+    <form action="http://www.example.com/add.php">
+        <button><img src="images/add.gif" alt="add" width="10" height="10">Add</button>
+        <input type="hidden" name="bookmark" value="lyrics">
+    </form>
+    <p>O atributo name indica o nome do controle de formulário que está sendo enviado ao servidor, juntamente com o
+        valor que o usuário selecionou.</p>
+    <hr>
+    <p>Tag label ela é usada para acessibilidade e também para direcionar algo. e envolver a descrição do texto e a
+        entrada do formulário.</p>
+    <label>Age: <input type="text" name="age"></label>
+    <br>Gender:
+    <input type="radio" name="gender" id="female" value="f">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="male" value="m">
+    <label for="male">Male</label>
+    <hr>
+    <p>Eu posso separar um grupo de controles relacionados juntos.</p>
+    <fieldset>
+        <legend>Contact details</legend>
+        <label>Email:<br>
+            <input type="text" name="email"></label><br>
+        <label>Mobile: <br>
+            <input type="text" name="mobile">
+        </label> <br>
+        <label>Telephone: <br>
+            <input type="text" name="telephone"></label>
+    </fieldset>
+    <hr>
+    <p>Form validation, geralmente é verificado pelo javascript, mas com o html5 já é possível deixar isso com o
+        navegador. e tempo de resposta rápido.</p>
+    <form action="http://www.example.com/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required="required" id="username"><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required="required">
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <br>
+    <p>Date Input</p>
+    <form action="http://www.example.com/bookings/" method="post">
+        <label for="username">Desparture date:</label>
+        <input type="date" name="depart">
+        <input type="submit" value="Submit">
+    </form>
+    <p>Existe também os input type email e url, onde um celular pode mostrar teclas especiais e também vai verificar se
+        de fato está correto aquele dado.</p>
+    <form action="http://www.example.org/subscribe.php">
+        <p>Please enter your email address:</p>
+        <input type="email" name="email">
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <form action="http://www.example.org/profile.php">
+        <p>Please enter your website address:</p>
+        <input type="url" name="website">
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <p>
+        Agora para pesquisa nós teremos:
+    </p>
+    <form action="http://www.example.org/search.php">
+        <p>Search:</p>
+        <input type="search" name="search" >
+        <input type="submit" value="Search">
+    </form>
+    <hr>
+    <p>Com place holder.</p>
+    <form action="http://www.example.org/search.php">
+        <p>Search:</p>
+        <input type="search" name="search" placeholder="Enter keyword">
+        <input type="submit" value="Search">
+    </form>
+</body>
+
+</html>
