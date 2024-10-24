@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--Doctype é usado para ajudar o navegador na identificação do tipo de versão do html está sendo utilizada.-->
+<head>
+    <title>Forms</title>
+</head>
+<!--O atributo id é usado para identificar exclusivamente um elemento de outros elementos na página.
+com ele é possível você atribuir uma estilização de maneira diferente aos outros elementos iguais.
+É possível usar eles para que o script funcione com esse elemento específico.-->
+<!--Caso você queira identificar vários elementos como sendo diferentes dos outros elementos da página,
+você pode usar o atributo class.
+Se você quiser indicar que ele pertence a várias classes, basta você separar os nomes das classes com um espaço.-->
+<body>
+    <!-- Ctrl + ; faz você comentar automaticamente. -->
+    <form action="http://www.example.com/review.php" method="get">
+        <fieldset>
+            <!-- Elementos que sempre aparecerão para iniciar em uma nova linha na janela do navegador
+             são conhecidos como Block Level.
+             Os que aparecerão continuar na mesma linha que seus elementos vizinhos
+             são conhecimentos como inline elements. -->
+            <legend>Your Details:</legend>
+            <label>
+                Name:
+                <input type="text" name="name" size="30" maxlength="100">
+            </label>
+            <br>
+            <label>
+                Email:
+                <input type="email" name="email" size="30" maxlength="100">
+            </label>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Your Review:</legend>
+            <p>
+                <label for="hear-about">
+                    How did you hear about us?
+                </label>
+                <select name="referrer" id="hear-about">
+                    <option value="google">google</option>
+                    <option value="friend">friend</option>
+                    <option value="advert">advert</option>
+                    <option value="other">other</option>
+                </select>
+            </p>
+            <p>
+                Would you visit again?
+                <br>
+                <label>
+                    <input type="radio" name="rating" value="yes">
+                    yes
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="no">
+                    no
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="maybe">
+                    maybe
+                </label>
+            </p>
+            <p>
+                <label for="comments">
+                    Comments:
+                </label>
+                <br>
+                <textarea rows="4" cols="40" id="comments"></textarea>
+            </p>
+            <label>
+                <input type="checkbox" name="subscribe" checked="checked">
+                Sign me up for email updates
+            </label>
+            <br>
+            <input type="submit" value="Submit review">
+        </fieldset>
+    </form>
+</body>
+
+</html>

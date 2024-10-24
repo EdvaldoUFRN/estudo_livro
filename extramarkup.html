@@ -1,0 +1,109 @@
+<!-- Agrupando texto e elementos em um bloco
+  -->
+<html>
+<!-- a tag Div permite agrupar um conjunto de elementos
+     em uma caixa de nível de bloco.
+     por exemplo, você pode conter todos os elementos do cabeçalho
+     do seu site ou pode criar um div elemento para conter comentários dos visitantes. -->
+<head>
+    <meta name="description" content="An essay on installation art">
+    <meta name="keywords" content="installation, art, opinion">
+    <meta name="robots" content="nofollow">
+    <meta http-equiv="author" content="Jon Duckett">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="Fri, 04 Apr 2014 23:59:59 GMT">
+
+    <title>Markup</title>
+</head>
+     
+
+<body>
+    <!-- usar um atributo id ou class no div faz com que você possa
+         criar regras no css para indicar quanto espaço o div elemento deve ocupar na tela
+         e alterar a aparencia de todos os elementos contidos nele. -->
+    <div id="header">
+        <!-- Também pode facilitar o acompanhamento do código se você tiver usado div para manter cada seção da página. -->
+        <img src="image/logo.gif" alt="Anish Kapoor">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biography.html">biography</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </div>
+
+    <!-- end off header. -->
+
+    <!-- Agrupando textos e elementos inline 
+         ele é equivalente ao div só que inline, serve para conter uma seção 
+         de texto onde não há outro elemento adequado para diferenciá-lo do seu texto
+         conter vários elementos inline.
+         o motivo mais comum que as pessoas usam é para controlar a aparência do conteúdo
+         desses elementos usando CSS.
+         você verá que um atributo class ou id é usado com span.
+         -->
+    <p>
+        Anish kapoor won the turner prize in 1991 and exhibited at the <span class="gallery">TAte modern</span> gallery
+        in london in 2003.
+    </p>
+    <!-- iframe
+          é  usado como uma pequena janela que foi cortada em sua página.
+          é abreviação de quadro embutido.
+          por exemplo. incorporar um mapa do google em uma página. 
+          o conteúdo pode ser qualquer página html, no mesmo servidor ou qualquer lugar na web
+          .
+          -->
+    <iframe width="450" height="350" src="http://maps.google.co.uk/maps?q=moma+new+york&amp;output=embed" seamless>
+        <!-- O atributo seamless pode ser aplicado a um 
+     iframe quando as barras de rolagem não são desejadas. -->
+    </iframe>
+    <hr>
+    <!-- Informações sobre a sua página.
+      o meta reside dentro do head e contém informações sobre a 
+      página web.
+      não é visível aos users.
+      pode informar aos mecanismos de pesquisa sobre sua página.
+      quem a criou, se ela é ou não sensível ao tempo.
+      se for ela pode ser configurada a expirar.
+      ele usa atributos para transportar informações.-->
+    <!-- Os atributos mais comuns são os atributos name e content, que 
+       tendem a ser usados juntos.
+       esses atributos especificam as propriedades de toda a página.
+       o valor do name é a propriedade que você está definindo e o content é o valor que deseja dar a essa propriedade.
+       o name indica uma intenção de especificar uma descrição para a página
+       e o content é onde essa descrição é realmente especificada. -->
+    <!-- O nome pode ser o que quiser. algum usado normalmente é o valor description
+        contém uma descrição da página.
+        essa descrição é as vezes exibido nos resultados do mecanismos de busca. -->
+    <!-- valor robots, isso indica se os mecanismos de busca devem adicionar está página
+         aos seus resultados de pesquisa ou não.
+         Um valor de noindex pode ser usado se esta página não deve ser adicionada.
+         Um valor de nofollow pode ser usado se os mecanismos de pesquisa adicionarem esta página
+         em seus resultados, mas não quaisquer páginas as quais ela esteja vinculada. -->
+    <!-- O valor pragma impede que o navegador armazene a página em cache. ou seja
+         armazená-lo locamente para economizar tempo baixando-o em visitas.
+         o valor expires, geralmente armazenam em cache o conteúdo de uma página,
+         a opção expires pode se rusada para indicar quando a página deve expirar.
+         
+          -->
+        <!-- Se você quiser usar caracteres que são reservados pelo html code, você vai ter que usar códigos
+          -->
+    
+        <!-- para incorporar video e audio
+         segue o código abaixo: -->
+         <video width="320" height="240" controls>
+            <source src="caminho/para/o/video.mp4" type="video/mp4">
+            <source src="caminho/para/o/video.webm" type="video/webm">
+            <source src="caminho/para/o/video.ogv" type="video/ogg">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    
+        <!-- Incorporação de um áudio -->
+        <audio width="320" height="240" controls>
+            <source src="caminho/para/o/audio.mp3" type="audio/mpeg">
+            <source src="caminho/para/o/audio.ogg" type="audio/ogg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+</body>
+
+</html>
