@@ -1,7 +1,53 @@
 <!DOCTYPE html>
 <!--Doctype é usado para ajudar o navegador na identificação do tipo de versão do html está sendo utilizada.-->
+
 <head>
     <title>Forms</title>
+    <style>
+        fieldset {
+            width: 350px;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        legend {
+            background-color: #efefef;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            padding: 10px 20px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        /*tem como usar também o gradiente para deixar mais bonito input#submit {
+  color: #444444;
+  text-shadow: 0px 1px 1px #ffffff;
+  border-bottom: 2px solid #b2b2b2;
+  background-color: #b9e4e3;
+  background: -webkit-gradient(linear, left top,
+    left bottom, from(#beeae9), to(#a8cfce));
+  background:
+    -moz-linear-gradient(top, #beeae9, #a8cfce);
+  background:
+    -o-linear-gradient(top, #beeae9, #a8cfce);
+  background:
+    -ms-linear-gradient(top, #beeae9, #a8cfce);}
+input#submit:hover {
+  color: #333333;
+  border: 1px solid #a4a4a4;
+  border-top: 2px solid #b2b2b2;
+  background-color: #a0dbc4;
+  background: -webkit-gradient(linear, left top,
+    left bottom, from(#a8cfce), to(#beeae9));
+  background:
+    -moz-linear-gradient(top, #a8cfce, #beeae9);
+  background:
+    -o-linear-gradient(top, #a8cfce, #beeae9);
+  background:
+    -ms-linear-gradient(top, #a8cfce, #beeae9);}*/
+    </style>
 </head>
 <!--O atributo id é usado para identificar exclusivamente um elemento de outros elementos na página.
 com ele é possível você atribuir uma estilização de maneira diferente aos outros elementos iguais.
@@ -9,6 +55,7 @@ com ele é possível você atribuir uma estilização de maneira diferente aos o
 <!--Caso você queira identificar vários elementos como sendo diferentes dos outros elementos da página,
 você pode usar o atributo class.
 Se você quiser indicar que ele pertence a várias classes, basta você separar os nomes das classes com um espaço.-->
+
 <body>
     <!-- Ctrl + ; faz você comentar automaticamente. -->
     <form action="http://www.example.com/review.php" method="get">
