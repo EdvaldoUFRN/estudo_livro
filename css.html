@@ -1,0 +1,185 @@
+<!-- o css funciona a partir de regras.
+ onde vai ter o seletor e a declaração.
+ se eu quiser colocar mais de um seletor para 
+ ser afetado
+ basta eu colocar virgula
+ por exemplo:
+ h1, h2, h3 {
+ color: yellow;
+ font-family: Arial;
+ 
+ tag link ajuda a informar para o html onde ele pode encontrar
+ o arquivo css.} -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- eu posso omitir o atributo type já que 
+     o css é a única folha de estilo usada na web.
+     o atributo rel, especifíca a relação entre o 
+     arquivo html. -->
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Tipos de seletores do css.
+        universal -> *
+        class -> .note {}
+        p.note {
+        vai pegar todos os p que tenham a classe.
+        }
+        id -> #note {
+
+        }
+        child selector -> li>a{
+        ele vai pegar e vai afetar todos os a que
+        são filhos de li.
+        }
+        descendant selector ->
+        p a {
+        ele vai pegar e vai afetar todos os a
+        que estejam dentro de um elemento p.
+        }
+        adjacent sibling selector ->
+        h1+p {
+        ele vai afetar todo primeiro p
+        de um elemento h1.
+        }
+        general sibling selector ->
+        h1~p {
+        vai afetar os irmãos dele,
+        sem necessariamente ter que ser o anterior a ele.
+
+        }
+        <strong>Eu posso querer que uma regra
+            seja mais importante que as outras
+            então eu uso o seguinte.
+            p b {
+            color: blue !important;
+            }
+        </strong>
+        <hr>
+        <strong>Herança pode ser aplicada
+            por exemplo no body, afetando a cor
+            ou a font das letras na página.
+        </strong>
+        <br>
+        <strong>se eu quiser eu posso pegar
+            e herdar um valor deum seletor pai.
+            exemplo 
+            body {
+                padding: 10px;
+            }
+            .page {
+                padding: inherit;
+            }
+        </strong>
+        <br>
+        <strong>
+            podemos comentar arquivos css, fazendo
+            uso do /**/.
+        </strong>
+        <br>
+        <hr>
+        <strong>A propriedade color faz com que você
+            modifique a cor do texto dentro do elemento.
+        </strong>
+        O css interpreta cada elemento do HTMl
+        como se ele estivesse dentro de uma caixa, e
+        quando usamos a propriedade background-color
+        a gente está colocando um cor para esse fundo 
+        da caixa.
+        <strong>ferramentas como photoshop ou 
+            GIMP podem disponibilizar o hex
+            da cor que você selecionou.
+      <hr>
+      o contraste influência na leitura de textos.
+      se você colocar um texto claro em um fundo escuro
+      você vai facilitar mais a leitura.
+      Para criar o fallback, você pode especificar uma cor como um código hexadecimal, nome de cor ou valor RGB, seguido pela regra que especifica um valor RGBA. Se o navegador entender as cores RGBA, ele usará essa regra. Caso contrário, ele usará o valor RGB
+        </strong>
+        <hr>
+        <strong> p.one {
+            background-color: rgb(0,0,0);
+            opacity: 0.5;}
+            p.two {
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.5);}</strong>
+    </p>
+    <hr>
+    <p>também podemos usar a propriedade
+        hsl
+        hue saturation e lightness
+        hsla é o alpha.
+        body {
+            background-color: #C8C8C8;
+            background-color: hsl(0,0%,78%);}
+            p {
+            background-color: #ffffff;
+            background-color: hsla(0,100%,100%,0.5);}
+    </p>
+    <h1>
+        A ideia de fallback é tipo você coloca uma coisa
+        antes dela, aí se a proxima n funcionar
+        ela vai pegar a anterior.
+    </h1>
+    <h2>
+        Padding aumenta a lacuna entre a caixa e o 
+        texto interior próprio.
+        margin aumenta a lacuna entre a caixa atual e
+        as outras.
+    </h2>
+    <h3>
+        as fontes serif e a sans-serif são boas para a lei
+        tura, a sans-serif deixa um aspecto mais clean.
+        já que suas extremidaddes são retas.
+    </h3>
+    <h4>para usar uma fonte costumizada ou ainda uma outra fonte qualquer 
+        que você queira que seja baixada pelo usuário, quando ele entrar no
+        site.  @font-face {
+            font-family: 'ChunkFiveRegular';
+            src: url('fonts/chunkfive.eot');}
+            h1, h2 {
+            font-family: ChunkFiveRegular, Georgia, serif;}
+            <hr>
+            Se você não tiver todos esses formatos para sua fonte, poderá enviar a fonte para um site chamado FontSquirrel, onde eles a converterão para você
+            <hr>
+            existe ainda a propriedade <strong> font-weight </strong>que vai
+            meio que definir o peso da fonte, podendo ser
+            normal ou bold.
+            existe também a <strong>font-style</strong>, que vai definir sendo italic, normal
+            ou oblicua..
+            <hr>
+                <strong>text-transform, vai dizer se é upppercase ou lowercase ou capitalize que vai dizer que a primeira letra de cada palavra será maiuscula.</strong>
+    </h4>
+    <hr>
+    <br>
+    <h2>
+        <strong>text-decoration</strong>  -> pode ser
+        none, underline, overline, line-through.
+        <hr>
+        <strong>line-height</strong> -> vai aumentar a altura das linhas, ou seja pode ser que fique um distanciamento entre as linhas de texto.
+        <hr>
+        também vai existir o letter-spacing e o word-spacing, um vai separar as letras da palavra e o outro vai separar as palavras.
+        <hr>
+        existe também o <strong>
+            text-align
+        </strong> -> ele vai alinhar o texxto dentro da caixa., tendo o left,right,center,justify
+    </h2>
+    e também vai ter o  baseline
+    sub
+    super
+    top
+    text-top
+    middle
+    bottom
+    text-bottom que é do vertical-align.
+    <h5>
+        a propriedade text-indent permite recuar a primeira linha de texto dentro de um elemento,  você pode usar valores negativos também, é uma boa sacada você usar uma imagem como titulo por exemplo e colocar o text-ident pra chutar o titulo lá pra pqp, assim você pode ter acessibilidade no site.
+    </h5>
+</body>
+
+</html>
